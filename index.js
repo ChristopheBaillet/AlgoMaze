@@ -33,7 +33,7 @@ async function iterativeDFS(maze, start) {
                 return result;
             }
         }
-        const neighbors = findNeighbors(v);
+        const neighbors = findNeighborsWitouthWalls(v);
         for (let neighbor of neighbors) {
             if (!neighbor.visited) {
                 neighbor.parent = v;
@@ -68,7 +68,7 @@ async function BFS(maze, start) {
             }
         }
 
-        const neighbors = findNeighbors(v);
+        const neighbors = findNeighborsWitouthWalls(v);
         for (let neighbor of neighbors) {
             if (!neighbor.visited) {
                 neighbor.parent = v;
@@ -80,7 +80,7 @@ async function BFS(maze, start) {
 }
 
 
-function findNeighbors(cell) {
+function findNeighborsWitouthWalls(cell) {
     const neighbors = [];
     for (let i = 0; i < cell.walls.length; i++) {
         if (!cell.walls[i]) {
@@ -103,6 +103,11 @@ function findNeighbors(cell) {
         }
     }
     return neighbors;
+}
+
+function findNeighbours(maze){
+    const neighbors = [];
+
 }
 
 function isEmpty(stack) {
