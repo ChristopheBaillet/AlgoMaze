@@ -105,9 +105,13 @@ function findNeighborsWitouthWalls(cell) {
     return neighbors;
 }
 
-function findNeighbours(maze){
-    const neighbors = [];
-
+function findNeighbours(maze, cell){
+    return [
+        maze[translateCoordonatesToSingle(cell.posX, cell.posY)],
+        maze[translateCoordonatesToSingle(cell.posX, cell.posY)],
+        maze[translateCoordonatesToSingle(cell.posX, cell.posY)],
+        maze[translateCoordonatesToSingle(cell.posX, cell.posY)],
+    ];
 }
 
 function isEmpty(stack) {
