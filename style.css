@@ -1,0 +1,44 @@
+:root {
+    --border-color: red;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 0;
+    background-color: black;
+}
+
+.container {
+    margin: auto;
+    width: 500px;
+}
+
+#maze {
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+
+.entrance {
+    background-color: orange;
+}
+
+.exit {
+    background-color: green;
+}
+
+.top {
+    border-top: 1px solid var(--border-color);
+}
+
+.bottom {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.right {
+    border-right: 1px solid var(--border-color);
+}
+
+.left {
+    border-left: 1px solid var(--border-color);
+}
